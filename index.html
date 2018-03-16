@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    1,ssh 可以不需要输入密码提交到github上,解决以前每次push输入密码啥的繁琐的问题
+
+    2,原理是你在你的电脑上生成一个密钥(钥匙)(是一串乱码,每一个的电脑都不一样)把你当前的电脑密码和你的github账号关联起来,下次你这个电脑进行push就会自动提交到你当前绑定的gitHub 账号上
+
+    1,生成秘钥的绑定和步骤
+        1,在电脑上面去生成一个秘钥
+        2,进入用户的文件夹.创建一个.ssh目录,在当前用户文件夹下打开黑窗,执行mrdir .ssh
+        3,进入.ssh文件夹,输入ssh-keygen -t rsa -C
+        "xxxx@163,com" 按3次回车生成一个秘钥
+        4,生成之后打开.pub的公开秘钥拷贝里面的密码去gitthub绑定
+        5,点开github settings 找到ssh设置
+        6,点击new ssh key 
+        7,输入用户名和刚刚拷贝的密码添加就成功了
+
+        
+
+
+
+
+
+</body>
+</html>
